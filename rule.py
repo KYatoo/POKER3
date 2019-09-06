@@ -15,7 +15,9 @@ class poker3:
 
     #是否顺子
     def shunzi(self):
-        if self.paiMianset[len(self.paiMianset)-1]-self.paiMianset[0] == 4 and len(self.paiMianset)==5:
+        if self.paiMianset[-1]-self.paiMianset[0] == 2 and len(self.paiMianset)==3:
+            return True
+        elif self.paiMianset[1]==12 and self.paiMianset[-1]== 13 and self.paiMianset[0]==1:
             return True
         return False
 
